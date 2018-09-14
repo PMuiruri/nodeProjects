@@ -1,0 +1,25 @@
+{
+		"leila":{
+		"firstname":"Leila",
+		"lastName":"Hökki",
+		"yearOfBirth":"1999",
+		"photo":"leila.png"
+	},
+	"hilka":{
+		"firstName": "Hilka",
+		"lastName":"Eliö",
+		"photo":"hilka.png"
+	},
+	"aki":{
+		"firstName": "Aki",
+		"lastName":"Köllihe",
+		"yearOfBirth":2005,
+		"photo":"aki.png"
+	},
+	"pirkko":{
+		"firstName":"Pirkko",
+		"lastName":"Puro",
+		"yearOfBirth": 1899,
+		"yearOfDeath": 1999
+	}
+}
