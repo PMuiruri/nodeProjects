@@ -1,0 +1,27 @@
+{
+	"debug":true,
+	"host":"localhost",
+	"port":"3306",
+	"admin":"root",
+	"adminpassword":"",
+	"user":"saku",
+	"password":"secret",
+	"database":"persondatabase",
+	"dropUser":true,
+	"tables":[
+		{
+			"name":"person",
+			"fields":[
+				"personId integer not null primary key",
+				"firstname varchar(20) not null",
+				"lastname varchar(30) not null",
+				"department varchar(15)",
+				"salary decimal(6,2)"
+			],
+			"data":[
+				[1, "Leila", "Hökki", "ICT", 5000],
+				[2, "Pirkko", "Puro", "Admin", 3000]
+			]
+		}
+	]
+}
