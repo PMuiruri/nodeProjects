@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script type="text/javascript">
+		function update(){
+		  let url=document.getElementById('url').value;
+		  let p = document.getElementById('text');
+		  let image = document.getElementById('image');
+			let roomName = document.getElementById('roomName');
+
+			console.log(url);
+
+		  fetch(url)
+		    .then(data => data.json())
+		    .then(room =>{
+		      roomName.textContent = room.name;
+		      p.textContent = room.roomtext;
+		      image.src="http://localhost:3000/images/"+room.image;
+					console.log(image.src='http://localhost:3000/images/'+room.image);
+		    })
+		    .catch(err =>{
+		      p.textContent ='';
+		      image.src='';
+		      roomName.textContent='error: Not Found';
+		    });
+		}
+
+	</script>
+	<title>Game Api</title>
+</head>
+<body>
+	<h1>Game Api test</h1>
+	<div>
+		<label>API URL:
+			<input type="text" id="url" size="50" placeholder="http://localhost:3000/api/levels/1/rooms/1" name="" value="">
+		</label>
+		<button onclick="update()">Send</button>
+	</div>
+	<h2 id="roomName"></h2>
+	<p id="text"></p>
+	<img src="" id="image" alt=""/>
+</body>
+</html>
