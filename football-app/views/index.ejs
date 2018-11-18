@@ -1,0 +1,35 @@
+<% include partials/header.ejs%>
+<div class="table-container">
+	<% if (players.length > 0) {%>
+		<table class="table">
+			<thead class="head">
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Image</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">Number</th>
+					<th scope="col">Position</th>
+					<th scope="col">Country</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% players.forEach((player, index)=> {%>
+					<tr>
+						<th scope="row"><%= player.playerId %></th>
+						<th scope="row"><img src="/images/<%= player.image %>" alt="<%= player.image %>"></th>
+						<th scope="row"><%= player.firstname %></th>
+						<th scope="row"><%= player.lastname %></th>
+						<th scope="row"><%= player.playernumber %></th>
+						<th scope="row"><%= player.position %></th>
+						<th scope="row"><%= player.country %></th>
+					</tr>
+					<% }) %>
+			</tbody>
+		</table>
+		<% } else { %>
+			<p> No players found</p>
+		<% } %>
+</div>
+</body>
+</html>
