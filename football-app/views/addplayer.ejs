@@ -1,0 +1,40 @@
+<% include partials/header.ejs%>
+<div class="container">
+	<% if(message != '') {%>
+		<<p><%= message %></p>
+	<% } %>
+	<form class="" action="" method="post" enctype="multipart/form-data">
+		<div class="form-row">
+			<div class="">
+				<input type="text" name="playerId" placeholder="Player ID" id="playerId" required>
+			</div>
+			<div class="">
+					<input type="text" name="firstname" placeholder="First Name" id="firstname" required>
+			</div>
+			<div class="">
+					<input type="text" name="lastname" placeholder="Last Name" id="lastname" required>
+			</div>
+			<div class="">
+					<input type="number" name="playernumber" placeholder="Player Number" id="playernumber" required>
+			</div>
+			<div class="">
+					<select id="position" class="" name="position">
+						<option selected disabled >Choose Position</option>
+						<option value="GoalKeeper">GoalKeeper</option>
+						<option value="Defender">Defender</option>
+						<option value="Midfielder">Midfielder</option>
+						<option value="Forward">Forward</option>
+					</select>
+			</div>
+			<div class="">
+				<label for="player-img"><b>Player Image</b></label>
+				<input type="file" name="image" id="image">
+			</div>
+		</div>
+		<div class="">
+			<button type="submit" name="button">Add Player</button>
+		</div>
+	</form>
+</div>
+</body>
+</html>
