@@ -1,0 +1,19 @@
+{
+	"getAllSql":[
+		"select customerId, firstname, lastname, address, favoriteIcecream from customer"],
+	"getCustomerSql":[
+		"select customerId, firstname, lastname, address, favoriteIcecream from customer",
+		"where customerId=?"
+	],
+	"insertCustomerSql":[
+		"insert into customer (customerId, firstname, lastname, address, favoriteIcecream)",
+		"values(?,?,?,?,?)"
+	],
+	"deleteCustomerSql":[
+		"delete from customer where customerId=?"
+	],
+	"updateCustomerSql":[
+		"update customer set firstname=?, lastname=?, address=?, favoriteIcecream=?",
+		"where customerId=?"
+	]
+}
