@@ -9,5 +9,5 @@ module.exports = function(sessionStorage, users, role){
 			req.isAllowed = req.session && users.isAccepted(name, role);
 			next();
 		}
-	}
-}
+	};
+};

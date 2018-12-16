@@ -39,7 +39,7 @@ module.exports = (storage, users) =>{
 		}
 	});
 	return router;
-}
+};
 
 function login(req, res, next){
 	if(!sessionStorage.hasSession(req.sessionID)){

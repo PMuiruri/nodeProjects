@@ -4,7 +4,7 @@ module.exports = class UserStorage{
 	constructor(){
 		this.users = new Map();
 
-		//The password hash operation should be done so that passowrds are not shown in clear texts
+		//The password hash operation should be done so that passwords are not shown in clear texts
 		this.users.set('leila', {password:'xyz', role:'admin'});
 		this.users.set('aapeli', {password:'123', role:'user'});
 	}

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = class Sessionstorage{
-	constructor(validityCheckIntervalMs = 100000, maxLife= 10000){
+	constructor(validityCheckIntervalMs = 10000, maxLife= 10000){
 		this.sessions = {};
 		this.maxLife = maxLife;
 		setInterval(()=> this.validate(), validityCheckIntervalMs);
@@ -10,7 +10,7 @@ module.exports = class Sessionstorage{
 	validate(){
 		let time = new Date();
 		for(let key of Object.keys(this.sessions)){
-			if(this.sessions[key]. session.cookie && this.sessions[key].session.cookie.maxAge){
+			if(this.sessions[key].session.cookie &&this.sessions[key].session.cookie.maxAge){
 				if(this.sessions[key].session.cookie.maxAge<0){
 					this.remove(key);
 				}
@@ -64,7 +64,7 @@ module.exports = class Sessionstorage{
 	}
 
 	toString(){
-		let sessionStr = '';
+		let sessionStr= '';
 		for(let key of Object.keys(this.sessions)){
 			let tmpSes = this.sessions[key];
 			let max = tmpSes.session.cookie.maxAge;
